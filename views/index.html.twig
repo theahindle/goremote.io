@@ -7,6 +7,7 @@
     {% for job in latestJobs %}
     	<li class='job'>
     		<a href='{{ path('job-by-id-title', {id: job.jobid, title: slugify(job.position)}) }}'>
+    			<img class='left company-logo-thumbnail' src='{{job.companylogo}}' />
 	    		<span class="company">{{job.companyname}}</span>
 	    		<span class="right date show-for-medium-up">{{job.dateadded_unixtime|date('M d')}}</span>
                 <span class="right source show-for-medium-up">{{job.sourcename}}</span>
