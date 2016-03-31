@@ -1,4 +1,4 @@
-#twitter-widget-0 { 
+#twitter-widget-0 {
   margin-top: 8px !important;
   margin-right:5px !important;
 }
@@ -69,4 +69,23 @@ ul {
 
 .row {
 	padding:5px;
+}
+
+.logo-right {
+	float:right;
+}
+.logo-right img {
+	max-width:15%;
+	height:auto;
+}
+.job-main ul {
+	margin-bottom:10px;
+}
+@media screen and (max-width:480px) {
+	.logo-right {
+		float:none;
+	}
+	.logo-right img {
+		max-width:100%;
+	}
 }
