@@ -8,7 +8,9 @@
 
 {% block content %}
 	{% if job.companylogo is not empty %}
-    	<img class='right' src='{{job.companylogo}}' />
+        <div class='logo-right'>
+    	   <img src='{{job.companylogo}}' alt='{{job.companyname}}' />
+        </div>
     {% endif %}
 
     <h1>{{job.position}}</h1>
@@ -18,7 +20,10 @@
     <a href='{{job.applyurl}}' class='show-for-small-only button'>Apply for this position</a>
     <hr>
 
-    {{job.description|clickable|raw}}
+    <div class='job-main'>
+        {{job.description|clickable|raw}}
+    </div>
+
 	<br>
 
     <a href='{{job.applyurl}}' class='button'>Apply for this position</a>

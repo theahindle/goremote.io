@@ -37,9 +37,9 @@ class JobModel
 			return false;
 		}
 
-		$this->description = $string = preg_replace('/(<br\/>){2,}/','<br/>', html_entity_decode(trim(strip_tags(str_replace(
+		$this->description = $string = nl2br(preg_replace('/(<br\/>){2,}/','<br/>', html_entity_decode(trim(strip_tags(str_replace(
 			['<div>', '</div>', '<br />', "\n\n"],
-			['', "<br/>", "<br/>", "<br/>"], $this->description), '<b><strong><ul><li><br><br/><br />'))));
+			['', "<br/>", "<br/>", "<br/>"], $this->description), '<b><strong><ul><li><br><br/><br />')))));
 
 		$db->insert('jobs', [
 			'applyurl' => trim($this->applyurl),
